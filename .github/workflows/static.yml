@@ -5,6 +5,10 @@ on:
     branches:
       - main  # Runs when pushing to the main branch
 
+permissions:
+  contents: write  # Allows writing to the repository content (necessary for deployment)
+  id-token: write  # Grants permission for ID token requests
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -14,7 +18,7 @@ jobs:
         uses: actions/checkout@v4  # Latest version
 
       - name: Setup Pages
-        uses: actions/configure-pages@v3  # Updated version
+        uses: actions/configure-pages@v4  # Updated version
 
       - name: Upload HTML files to GitHub Pages
         uses: actions/upload-pages-artifact@v3  # Correct version for GitHub Pages
