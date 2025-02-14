@@ -1,9 +1,9 @@
-name: Deploy Static HTML
+name: Deploy Static HTML to GitHub Pages
 
 on:
   push:
     branches:
-      - main  # Runs when you push to the main branch
+      - main  # Runs when pushing to the main branch
 
 jobs:
   deploy:
@@ -11,15 +11,15 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4  # Use the latest version
 
       - name: Setup Pages
-        uses: actions/configure-pages@v3
+        uses: actions/configure-pages@v4  # Updated to the latest version
 
-      - name: Upload HTML to GitHub Pages
-        uses: actions/upload-pages-artifact@v2
+      - name: Upload HTML files to GitHub Pages
+        uses: actions/upload-pages-artifact@v2  # No changes needed
         with:
-          path: .  # This ensures all files are uploaded
+          path: .  # Uploads all files from the repo
 
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v2  # Deploys to GitHub Pages
