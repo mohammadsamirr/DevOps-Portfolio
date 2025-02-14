@@ -11,13 +11,13 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4  # Use the latest version
+        uses: actions/checkout@v4  # Latest version
 
       - name: Setup Pages
-        uses: actions/configure-pages@v4  # Updated to the latest version
+        uses: actions/configure-pages@v4  # Updated version
 
       - name: Upload HTML files to GitHub Pages
-        uses: actions/upload-pages-artifact@v2  # No changes needed
+        uses: actions/upload-pages-artifact@v2  # Updated version
         with:
           path: .  # Uploads all files from the repo
 
