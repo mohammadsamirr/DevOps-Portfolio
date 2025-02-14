@@ -17,13 +17,16 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4  # Latest version
 
+      - name: List files in the repository
+        run: ls -alh  # Check the files in the root directory
+
       - name: Setup Pages
         uses: actions/configure-pages@v4  # Updated version
 
       - name: Upload HTML files to GitHub Pages
         uses: actions/upload-pages-artifact@v3  # Correct version for GitHub Pages
         with:
-          path: './*'  # Explicitly upload all files in the root directory
+          path: './'  # Root directory where HTML files like index.html are located
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v2  # Deploys to GitHub Pages
