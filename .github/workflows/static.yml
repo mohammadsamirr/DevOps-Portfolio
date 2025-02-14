@@ -17,7 +17,7 @@ jobs:
         uses: actions/configure-pages@v4  # Updated version
 
       - name: Upload HTML files to GitHub Pages
-        uses: actions/upload-pages-artifact@v2  # Updated version
+        uses: actions/upload-pages-artifact@v2  # Correct version for GitHub Pages
         with:
           path: .  # Uploads all files from the repo
 
