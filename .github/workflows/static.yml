@@ -23,7 +23,7 @@ jobs:
       - name: Upload HTML files to GitHub Pages
         uses: actions/upload-pages-artifact@v3  # Correct version for GitHub Pages
         with:
-          path: ./  # Ensure this points to the root where index.html, css, js, etc., are located
+          path: './*'  # Explicitly upload all files in the root directory
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v2  # Deploys to GitHub Pages
